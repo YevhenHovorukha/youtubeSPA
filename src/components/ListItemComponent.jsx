@@ -95,7 +95,6 @@ const ListItemComponent = ({ listItemName, info }) => {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        sx={{ minWidth: 500 }}
       >
         <Box
           sx={{
