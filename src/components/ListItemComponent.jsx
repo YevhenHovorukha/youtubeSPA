@@ -95,6 +95,7 @@ const ListItemComponent = ({ listItemName, info }) => {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        sx={{ minWidth: 500 }}
       >
         <Box
           sx={{
@@ -106,6 +107,12 @@ const ListItemComponent = ({ listItemName, info }) => {
             bgcolor: "background.paper",
             boxShadow: 24,
             p: 4,
+            "@media (max-width: 600px)": {
+              left: 0,
+              top: "20%",
+              width: "100%",
+              transform: "none",
+            },
           }}
         >
           <form>
