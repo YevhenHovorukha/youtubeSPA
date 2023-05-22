@@ -107,9 +107,9 @@ const ListItemComponent = ({ listItemName, info }) => {
             boxShadow: 24,
             p: 4,
             "@media (max-width: 600px)": {
-              left: "10%",
+              left: "15%",
               top: "20%",
-              maxWidth: 350,
+
               transform: "translate(-10%, -20%)",
             },
           }}
