@@ -12,7 +12,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<ProtectedRoute />}>
-          <Route path="/" element={<Header />}>
+          <Route path="youtubeSPA/" element={<Header />}>
             <Route index element={<SearchBox />} />
             <Route path="favorites" element={<Favorites />} />
             <Route path=":id" element={<YoutubeVideo />} />

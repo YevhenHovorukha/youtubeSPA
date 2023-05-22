@@ -25,7 +25,7 @@ const CardComponent = ({ id, title, img, channelTitle, gridState }) => {
   return (
     <Card
       onClick={() => {
-        navigate(`/${currentId}`);
+        navigate(`${currentId}`);
       }}
       sx={{
         "@media (max-width: 750px)": {

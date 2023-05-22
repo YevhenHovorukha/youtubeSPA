@@ -83,20 +83,20 @@ const Header = () => {
             </IconButton> */}
             <NavLink
               style={({ isActive }) => (isActive ? activeLink : sxStyles)}
-              to="/"
+              to=""
             >
               <Typography variant="h6">SEARCH</Typography>
             </NavLink>
             <NavLink
               style={({ isActive }) => (isActive ? activeLink : sxStyles)}
-              to="/favorites"
+              to="favorites"
             >
               <Typography variant="h6">FAVORITES</Typography>
             </NavLink>
             <NavLink
               style={{ ...sxStyles, marginLeft: "auto", marginRight: 0 }}
               // to="/login"
-              to="/"
+              to=""
               onClick={() => dispatch(exit())}
             >
               <Typography variant="h6">EXIT</Typography>

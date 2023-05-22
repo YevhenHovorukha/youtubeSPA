@@ -59,7 +59,7 @@ const ListItemComponent = ({ listItemName, info }) => {
         sort: formData.sort,
       })
     );
-    navigate("/");
+    navigate("/youtubeSPA");
   };
 
   const handlerClickButton = (event) => {
