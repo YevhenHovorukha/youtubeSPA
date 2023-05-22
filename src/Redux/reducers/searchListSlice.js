@@ -43,12 +43,26 @@ export const searchList = createSlice({
       return { ...state, value: newArr };
     },
     editItem: (state, action) => {
+      const { prevState, newState, results, sort } = action.payload;
+
+      // Проверяем, есть ли уже элемент с таким значением newState в массиве
+      const isDuplicate = state.value.some(
+        (item) =>
+          item.search.toLowerCase().trim() === newState.toLowerCase().trim()
+      );
+
+      // Если элемент уже существует, можно выполнить какие-то дополнительные действия или просто вернуть текущее состояние
+      if (isDuplicate) {
+        // Действия для случая, когда элемент уже существует
+        return state;
+      }
+
       const newArr = state.value.map((item) =>
-        item.search === action.payload.prevState
+        item.search === prevState
           ? {
-              search: action.payload.newState,
-              results: action.payload.results,
-              sort: action.payload.sort,
+              search: newState,
+              results,
+              sort,
             }
           : item
       );

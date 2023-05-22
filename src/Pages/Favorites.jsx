@@ -3,15 +3,12 @@ import { Container } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import List from "@mui/material/List";
 import ListItemComponent from "../components/ListItemComponent";
-import { useDispatch, useSelector } from "react-redux/es/exports";
+import { useSelector } from "react-redux/es/exports";
 
 const Favorites = () => {
   const searchList = useSelector((state) => state.searchList.value);
 
-  const searcListItems = Array.from(
-    new Set(searchList.map(JSON.stringify)),
-    JSON.parse
-  ).map((item, index) => (
+  const searcListItems = searchList.map((item, index) => (
     <ListItemComponent listItemName={item.search} key={index} info={item} />
   ));
 
